@@ -1,6 +1,7 @@
 class Triangle
   # write code here
   
+  attr_accessor :side1, :side2, :side3, :equilateral, :scalene, :isosceles
   
   def initialize(side1, side2, side3)
     @sides = []
@@ -15,9 +16,9 @@ class Triangle
     one_three = @sides[0] + @sides[2]
     
     if (@sides.none? {|side| side <= 0}) && (one_two > @sides[2] && one_three > @sides[1] && two_three > @sides[0])
-      return true
+     true
     else
-      return false
+     false
     end
   end
   
